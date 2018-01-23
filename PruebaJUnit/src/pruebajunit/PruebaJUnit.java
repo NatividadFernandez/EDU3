@@ -17,15 +17,25 @@ public class PruebaJUnit {
      * @return
      */
     public static int division(int numerador, int denominador){
+        int resultado = 0;
+        try{
+            resultado = numerador/denominador;
+            
         return (numerador/denominador);
         
+        }catch(Exception e){
+            System.out.println("Se ha producido un error: "+e.getMessage());
+                    
+        }
+        
+        return resultado;
     }
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        System.out.println("Resultado de la operación: "+ division(2,3));
+        System.out.println("Resultado de la operación: "+ division(6,3));
     }
     
 }
